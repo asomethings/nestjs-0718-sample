@@ -7,6 +7,7 @@ export class AaaService {
     private readonly bbbService: BbbService,
   ) {
     this.bbbService.hello(); // 정상동작
+    setTimeout(this.hello.bind(this), 1000)
   }
  
   hello(): void {
